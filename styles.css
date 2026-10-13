@@ -295,7 +295,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .site-footer { margin-top: clamp(3rem, 7vw, 5rem); border-top: 1px solid var(--line); padding-block: 3rem 2rem; background: #0b0d11; }
 .foot-grid { display: grid; gap: 2.2rem; }
 @media (min-width: 760px) { .foot-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; } }
-.foot-grid h2 { font-size: .85rem; letter-spacing: .08em; color: var(--muted); font-weight: 700; margin-bottom: .9rem; }
+.foot-grid h2 { font-size: .85rem; letter-spacing: .08em; color: var(--accent); font-weight: 700; margin-bottom: .9rem; }
 .foot-grid ul { display: grid; gap: .55rem; }
 .foot-grid a { color: var(--soft); text-decoration: none; display: inline-block; padding: .15rem 0; }
 .foot-grid a:hover { color: var(--accent-2); text-decoration: underline; }
