@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Εργολάβος AI – Εφαρμογή διαχείρισης έργων για εργολάβους</title>
+  <meta name="description" content="Ο Εργολάβος AI είναι η εφαρμογή Android με AI βοηθό για εργολάβους: διαχείριση έργων, εισπράξεων, εξόδων, υπεργολάβων και εκκρεμοτήτων.">
+  <meta name="theme-color" content="#0d0f14">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'none'; connect-src 'none'; font-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <link rel="canonical" href="https://ergolavosai.gr/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="Εργολάβος AI">
+  <meta property="og:title" content="Εργολάβος AI – Όλη η δουλειά του εργολάβου σε μία εφαρμογή">
+  <meta property="og:description" content="Έργα, εισπράξεις, έξοδα, υπεργολάβοι και εκκρεμότητες, με AI βοηθό που ξέρει τα δεδομένα σου. Διαθέσιμο στο Google Play.">
+  <meta property="og:url" content="https://ergolavosai.gr/">
+  <meta property="og:image" content="https://ergolavosai.gr/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Εργολάβος AI – ο ρομπότ μασκότ με κίτρινο κράνος">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Εργολάβος AI – Όλη η δουλειά του εργολάβου σε μία εφαρμογή">
+  <meta name="twitter:description" content="Έργα, εισπράξεις, έξοδα, υπεργολάβοι και εκκρεμότητες, με AI βοηθό. Διαθέσιμο στο Google Play.">
+  <meta name="twitter:image" content="https://ergolavosai.gr/assets/og-image.png">
+
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Εργολάβος AI",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Android",
+    "inLanguage": "el",
+    "description": "Εφαρμογή Android με AI βοηθό για εργολάβους και τεχνικά επαγγέλματα: διαχείριση έργων, εισπράξεων, εξόδων, υπεργολάβων και εκκρεμοτήτων.",
+    "url": "https://ergolavosai.gr/",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.metehmio.ergolabosai",
+    "installUrl": "https://play.google.com/store/apps/details?id=com.metehmio.ergolabosai",
+    "image": "https://ergolavosai.gr/assets/mascot-640.webp",
+    "author": { "@type": "Organization", "name": "Metehmio Apps" }
+  }
+  </script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M4 6.5h14a2 2 0 0 1 2 2V18a2 2 0 0 1-2 2H4zM4 6.5l11-3v3M16 13.5h2"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M10 6h10M10 12h10M10 18h10M4 6l1.2 1.2L7 5.4M4 12l1.2 1.2L7 11.4M4 18l1.2 1.2L7 17.4"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><path d="M12 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM5 20a7 7 0 0 1 14 0"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M4 21V5l8-2v18M12 9h8v12M7 9h2M7 13h2M7 17h2M15 13h2M15 17h2M3 21h18"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></symbol>
+  <symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 4l9 16H3zM12 10v4M12 17.2v.1"/></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM9.6 9.4a2.5 2.5 0 1 1 3.6 2.2c-.8.4-1.2.9-1.2 1.8M12 16.6v.1"/></symbol>
+  <symbol id="i-hammer" viewBox="0 0 24 24"><path d="M14 4l6 6-3 3-6-6zM12.5 8.5L4 17l3 3 8.5-8.5"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3L5 13h6l-1 8 8-10h-6z"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Μετάβαση στο περιεχόμενο</a>
+
+<div class="topbar" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Εργολάβος AI – αρχική">
+      <img src="assets/mascot-80.webp" width="40" height="40" alt="">
+      <span>Εργολάβος <b>AI</b></span>
+    </a>
+    <nav class="nav" aria-label="Κύριο μενού">
+      <a href="#features">Λειτουργίες</a>
+      <a href="#ai">AI βοηθός</a>
+      <a href="#how">Πώς λειτουργεί</a>
+      <a href="#who">Για ποιους</a>
+    </nav>
+    <a class="btn btn-sm" href="https://play.google.com/store/apps/details?id=com.metehmio.ergolabosai&amp;hl=el" target="_blank" rel="noopener noreferrer">
+      <svg class="i" aria-hidden="true"><use href="#i-download"/></svg>
+      Google Play
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 1. HERO -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Εφαρμογή Android για τεχνικά επαγγέλματα</p>
+        <h1 id="hero-title">Όλη η δουλειά του εργολάβου, <em>σε μία εφαρμογή.</em></h1>
+        <p class="lead">Έργα, πελάτες, εισπράξεις, έξοδα, υπεργολάβοι και εκκρεμότητες — και ένας AI βοηθός που απαντά με βάση τα δικά σου δεδομένα.</p>
+        <div class="cta-row">
+          <a class="btn btn-lg" href="https://play.google.com/store/apps/details?id=com.metehmio.ergolabosai&amp;hl=el" target="_blank" rel="noopener noreferrer">
+            <svg class="i" aria-hidden="true"><use href="#i-download"/></svg>
+            Κατέβασε τον Εργολάβο AI στο Google Play
+          </a>
+          <a class="btn btn-lg btn-ghost" href="#features">Δες τις λειτουργίες</a>
+        </div>
+        <p class="hero-note">Διαθέσιμο για Android · Ολόκληρη η εφαρμογή στα ελληνικά</p>
+      </div>
+
+      <div class="hero-visual">
+        <div class="phone">
+          <img src="assets/home-720.webp" srcset="assets/home-360.webp 360w, assets/home-720.webp 720w" sizes="(min-width: 900px) 310px, 74vw" width="360" height="700" fetchpriority="high" decoding="async" alt="Αρχική οθόνη του Εργολάβου AI με καθαρό κέρδος, εισπράξεις, έξοδα και τα ενεργά έργα">
+        </div>
+        <img class="hero-mascot" src="assets/mascot-320.webp" width="320" height="320" alt="" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. ΤΟ ΠΡΟΒΛΗΜΑ -->
+  <section class="section" aria-labelledby="problem-title">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Το πρόβλημα</p>
+        <h2 id="problem-title">Οι δουλειές μεγαλώνουν. Οι σημειώσεις δεν φτάνουν.</h2>
+        <p>Πελάτες, δόσεις, προκαταβολές σε υπεργολάβους, υλικά, εκκρεμότητες. Όταν όλα αυτά ζουν σε τετράδια, μηνύματα και αρχεία, χάνεις χρόνο και καθαρή εικόνα. Ο Εργολάβος AI τα μαζεύει σε ένα μέρος.</p>
+      </div>
+      <ul class="asks">
+        <li class="ask reveal"><svg class="i" aria-hidden="true"><use href="#i-help"/></svg>Πόσα έχω εισπράξει και πόσα μου οφείλει ακόμη ο πελάτης;</li>
+        <li class="ask reveal"><svg class="i" aria-hidden="true"><use href="#i-help"/></svg>Τι οφείλω στους υπεργολάβους μου;</li>
+        <li class="ask reveal"><svg class="i" aria-hidden="true"><use href="#i-help"/></svg>Τι εκκρεμεί αυτή την εβδομάδα και ποιος το έχει αναλάβει;</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. ΒΑΣΙΚΕΣ ΛΕΙΤΟΥΡΓΙΕΣ -->
+  <section class="section alt" id="features" aria-labelledby="features-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Λειτουργίες</p>
+        <h2 id="features-title">Ό,τι χρειάζεται ένα συνεργείο για να έχει τον έλεγχο</h2>
+        <p>Κάθε οθόνη που βλέπεις παρακάτω είναι από την πραγματική εφαρμογή (με δοκιμαστικά δεδομένα).</p>
+      </div>
+
+      <ul class="chips-row" aria-label="Σύνοψη λειτουργιών">
+        <li class="tag"><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg>Διαχείριση έργων</li>
+        <li class="tag"><svg class="i" aria-hidden="true"><use href="#i-wallet"/></svg>Οικονομικά</li>
+        <li class="tag"><svg class="i" aria-hidden="true"><use href="#i-list"/></svg>Εκκρεμότητες</li>
+        <li class="tag"><svg class="i" aria-hidden="true"><use href="#i-people"/></svg>Υπεργολάβοι</li>
+        <li class="tag"><svg class="i" aria-hidden="true"><use href="#i-building"/></svg>Γενικά έξοδα</li>
+        <li class="tag"><svg class="i" aria-hidden="true"><use href="#i-spark"/></svg>AI βοηθός</li>
+      </ul>
+
+      <article class="showcase reveal">
+        <div>
+          <span class="num">01 · ΕΡΓΑ ΚΑΙ ΟΙΚΟΝΟΜΙΚΑ</span>
+          <h3>Κάθε έργο, με καθαρή οικονομική εικόνα</h3>
+          <p>Δες για κάθε έργο το συνολικό κόστος, την πρόοδο και πόσες ημέρες απομένουν. Εισπράξεις, έξοδα, υπόλοιπο και κέρδος βρίσκονται στην ίδια οθόνη.</p>
+          <ul class="checks">
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Εισπράξεις, έξοδα, υπόλοιπο και κέρδος ανά έργο</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Έξοδα ανά κατηγορία, με ημερομηνία και σημείωση</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Ξεχωριστές καρτέλες για εισπράξεις, δόσεις και υπεργολάβους</li>
+          </ul>
+        </div>
+        <div class="showcase-media">
+          <div class="phone">
+            <img src="assets/project-expenses-720.webp" srcset="assets/project-expenses-360.webp 360w, assets/project-expenses-720.webp 720w" sizes="(min-width: 860px) 290px, 70vw" width="360" height="700" loading="lazy" decoding="async" alt="Οθόνη έργου με συνολικό κόστος, ημέρες που απομένουν, εισπράξεις, έξοδα, υπόλοιπο, κέρδος και λίστα εξόδων">
+          </div>
+        </div>
+      </article>
+
+      <article class="showcase flip reveal">
+        <div>
+          <span class="num">02 · ΕΚΚΡΕΜΟΤΗΤΕΣ</span>
+          <h3>Τίποτα δεν ξεχνιέται στο εργοτάξιο</h3>
+          <p>Κατέγραψε τις εργασίες που περιμένουν, με το έργο, τον συνεργάτη που τις έχει αναλάβει και την ημερομηνία τους. Δεν χρειάζονται πια χαρτάκια και σημειώσεις.</p>
+          <ul class="checks">
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Κάθε εκκρεμότητα συνδέεται με έργο και συνεργάτη</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Οι ημερομηνίες χρωματίζονται ανάλογα με την προθεσμία</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Φιλτράρισμα ανά έργο ή προβολή όλων μαζί</li>
+          </ul>
+        </div>
+        <div class="showcase-media">
+          <div class="phone">
+            <img src="assets/tasks-720.webp" srcset="assets/tasks-360.webp 360w, assets/tasks-720.webp 720w" sizes="(min-width: 860px) 290px, 70vw" width="360" height="700" loading="lazy" decoding="async" alt="Οθόνη εκκρεμοτήτων με εργασίες ανά έργο, συνεργάτη και ημερομηνία">
+          </div>
+        </div>
+      </article>
+
+      <article class="showcase reveal">
+        <div>
+          <span class="num">03 · ΥΠΕΡΓΟΛΑΒΟΙ</span>
+          <h3>Ξέρεις πάντα τι έχεις πληρώσει και τι οφείλεις</h3>
+          <p>Για κάθε υπεργολάβο καταγράφεις τη συμφωνία, τις πληρωμές και τα έκτακτα κόστη. Η εφαρμογή δείχνει αμέσως το ποσό που οφείλεται ακόμη.</p>
+          <ul class="checks">
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Συμφωνία, πληρωμές, έκτακτα κόστη και υπόλοιπο οφειλής</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Προκαταβολές και πληρωμές με ημερομηνία</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Σύνολο οφειλών προς υπεργολάβους ανά έργο</li>
+          </ul>
+        </div>
+        <div class="showcase-media">
+          <div class="phone">
+            <img src="assets/subcontractors-720.webp" srcset="assets/subcontractors-360.webp 360w, assets/subcontractors-720.webp 720w" sizes="(min-width: 860px) 290px, 70vw" width="360" height="700" loading="lazy" decoding="async" alt="Καρτέλα υπεργολάβων με συμφωνία, πληρωμές, έκτακτα κόστη και ποσό που οφείλεται">
+          </div>
+        </div>
+      </article>
+
+      <article class="showcase flip reveal">
+        <div>
+          <span class="num">04 · ΕΠΙΧΕΙΡΗΣΗ</span>
+          <h3>Και τα γενικά έξοδα της επιχείρησης</h3>
+          <p>Μισθοί, ενοίκιο, ΔΕΗ, καύσιμα, φόροι, εργαλεία. Τα έξοδα που δεν ανήκουν σε ένα συγκεκριμένο έργο έχουν τη δική τους οθόνη, ώστε να βλέπεις το πραγματικό κόστος της δουλειάς σου.</p>
+          <ul class="checks">
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Κατηγορίες όπως μισθοί, ενοίκιο, ΔΕΗ, καύσιμα και φόροι</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Φίλτρα ανά μήνα, τρίμηνο, εξάμηνο και χρόνο</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Σύνολο εξόδων με μια ματιά</li>
+          </ul>
+        </div>
+        <div class="showcase-media">
+          <div class="phone">
+            <img src="assets/business-720.webp" srcset="assets/business-360.webp 360w, assets/business-720.webp 720w" sizes="(min-width: 860px) 290px, 70vw" width="360" height="700" loading="lazy" decoding="async" alt="Οθόνη γενικών εξόδων επιχείρησης με φίλτρα περιόδου και κατηγορίας">
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 4. AI ASSISTANT -->
+  <section class="section ai" id="ai" aria-labelledby="ai-title">
+    <div class="wrap ai-grid">
+      <div class="reveal">
+        <p class="eyebrow">AI βοηθός</p>
+        <h2 id="ai-title">Ένας βοηθός που ξέρει τα έργα σου</h2>
+        <p>Ρώτα με απλά λόγια, όπως θα ρωτούσες έναν συνεργάτη. Ο AI βοηθός του Εργολάβου AI αξιοποιεί τα δεδομένα της εφαρμογής και σου δίνει αναφορές, οικονομικές αναλύσεις και εκτιμήσεις κόστους.</p>
+
+        <div class="ai-kinds">
+          <div class="kind">
+            <svg class="i" aria-hidden="true"><use href="#i-folder"/></svg>
+            <div>
+              <h3>Αναφορές για τα έργα σου</h3>
+              <p>Ζήτα πλήρη αναφορά για ένα έργο και πάρε τα βασικά στοιχεία, τις εισπράξεις και τα έξοδα σε οργανωμένη μορφή.</p>
+            </div>
+          </div>
+          <div class="kind">
+            <svg class="i" aria-hidden="true"><use href="#i-hammer"/></svg>
+            <div>
+              <h3>Κοστολογήσεις και τεχνικές προτάσεις</h3>
+              <p>Περίγραψε μια δουλειά και πάρε εκτιμήσεις κόστους υλικών και εργασίας, ώστε να ξεκινάς την προσφορά σου με βάση.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="try-title">ΔΟΚΙΜΑΣΕ ΝΑ ΡΩΤΗΣΕΙΣ</h3>
+        <ul class="qs">
+          <li>«Πόσα χρήματα έχουμε εισπράξει από το έργο;»</li>
+          <li>«Πόσα μας οφείλει ακόμη ο πελάτης;»</li>
+          <li>«Τι έξοδα κάναμε σήμερα;»</li>
+          <li>«Ποιες εργασίες παραμένουν σε εκκρεμότητα;»</li>
+          <li>«Ποια είναι η οικονομική εικόνα του έργου;»</li>
+          <li>«Πόσο κοστίζει μια αντλία θερμότητας για κατοικία 76 τ.μ.;»</li>
+        </ul>
+
+        <p class="notice">
+          <svg class="i" aria-hidden="true"><use href="#i-warn"/></svg>
+          <span>Οι απαντήσεις παράγονται από τεχνητή νοημοσύνη και ενδέχεται να περιέχουν λάθη. Οι τιμές είναι ενδεικτικές εκτιμήσεις και όχι προσφορά. Έλεγχε πάντα τα στοιχεία πριν πάρεις αποφάσεις.</span>
+        </p>
+      </div>
+
+      <div class="duo reveal">
+        <figure>
+          <div class="phone">
+            <img src="assets/ai-report-720.webp" srcset="assets/ai-report-360.webp 360w, assets/ai-report-720.webp 720w" sizes="(min-width: 960px) 270px, 44vw" width="360" height="700" loading="lazy" decoding="async" alt="Ο AI βοηθός δίνει πλήρη αναφορά για ένα έργο με βασικά και οικονομικά στοιχεία">
+          </div>
+          <figcaption>Πλήρης αναφορά έργου</figcaption>
+        </figure>
+        <figure>
+          <div class="phone">
+            <img src="assets/ai-costing-720.webp" srcset="assets/ai-costing-360.webp 360w, assets/ai-costing-720.webp 720w" sizes="(min-width: 960px) 270px, 44vw" width="360" height="700" loading="lazy" decoding="async" alt="Ο AI βοηθός κοστολογεί την τοποθέτηση αντλίας θερμότητας σε κατοικία 76 τετραγωνικών">
+          </div>
+          <figcaption>Κοστολόγηση εργασίας</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. ΠΩΣ ΛΕΙΤΟΥΡΓΕΙ -->
+  <section class="section" id="how" aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">Πώς λειτουργεί</p>
+        <h2 id="how-title">Τρία απλά βήματα</h2>
+      </div>
+      <ol class="steps">
+        <li class="step reveal">
+          <h3>Φτιάξε το έργο</h3>
+          <p>Πρόσθεσε τον πελάτη, το συνολικό κόστος και τη διάρκεια της δουλειάς.</p>
+        </li>
+        <li class="step reveal">
+          <h3>Κατέγραψε τα πάντα</h3>
+          <p>Έξοδα, εισπράξεις, δόσεις, πληρωμές υπεργολάβων και εκκρεμότητες, καθώς προχωράει η δουλειά.</p>
+        </li>
+        <li class="step reveal">
+          <h3>Δες και ρώτα</h3>
+          <p>Παρακολούθησε το κέρδος και την πρόοδο και ρώτησε τον AI βοηθό ό,τι θέλεις να μάθεις για το έργο.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 6. ΣΕ ΠΟΙΟΥΣ ΑΠΕΥΘΥΝΕΤΑΙ -->
+  <section class="section alt" id="who" aria-labelledby="who-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Για ποιους</p>
+        <h2 id="who-title">Φτιαγμένο για ανθρώπους που δουλεύουν στα έργα</h2>
+      </div>
+      <ul class="who">
+        <li class="reveal"><svg class="i" aria-hidden="true"><use href="#i-building"/></svg>Εργολάβοι οικοδομών</li>
+        <li class="reveal"><svg class="i" aria-hidden="true"><use href="#i-hammer"/></svg>Επαγγελματίες ανακαινίσεων</li>
+        <li class="reveal"><svg class="i" aria-hidden="true"><use href="#i-bolt"/></svg>Ηλεκτρολόγοι</li>
+        <li class="reveal"><svg class="i" aria-hidden="true"><use href="#i-drop"/></svg>Υδραυλικοί</li>
+        <li class="reveal"><svg class="i" aria-hidden="true"><use href="#i-people"/></svg>Τεχνικά συνεργεία</li>
+        <li class="reveal"><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg>Μικρές τεχνικές επιχειρήσεις</li>
+      </ul>
+      <p class="who-note">Για όποιον τρέχει ένα ή περισσότερα έργα και θέλει καθαρή εικόνα εσόδων, εξόδων και εκκρεμοτήτων, χωρίς χαρτιά και διάσπαρτες σημειώσεις.</p>
+    </div>
+  </section>
+
+  <!-- 7. DOWNLOAD -->
+  <section class="section" id="download" aria-labelledby="download-title">
+    <div class="wrap">
+      <div class="download reveal">
+        <img src="assets/mascot-320.webp" width="320" height="320" loading="lazy" decoding="async" alt="Ο μασκότ του Εργολάβου AI: ρομπότ με κίτρινο κράνος, σφυρί και κλειδί">
+        <div>
+          <h2 id="download-title">Ξεκίνα να οργανώνεις τα έργα σου σήμερα</h2>
+          <p>Κατέβασε τον Εργολάβο AI από το Google Play και βάλε σε τάξη έργα, οικονομικά και συνεργάτες από το κινητό σου.</p>
+          <a class="btn btn-lg" href="https://play.google.com/store/apps/details?id=com.metehmio.ergolabosai&amp;hl=el" target="_blank" rel="noopener noreferrer">
+            <svg class="i" aria-hidden="true"><use href="#i-download"/></svg>
+            Κατέβασε τον Εργολάβο AI στο Google Play
+          </a>
+          <p class="small">Διαθέσιμο για Android. Δες την <a href="privacy-policy.html">Πολιτική απορρήτου</a> και πώς μπορείς να ζητήσεις <a href="delete-account.html">διαγραφή λογαριασμού</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-about">
+        <a class="brand" href="#top" aria-label="Εργολάβος AI – πάνω">
+          <img src="assets/mascot-80.webp" width="40" height="40" alt="" loading="lazy">
+          <span>Εργολάβος <b>AI</b></span>
+        </a>
+        <p>Ο AI βοηθός για εργολάβους, τεχνικά επαγγέλματα και μικρές επιχειρήσεις.</p>
+      </div>
+      <div>
+        <h2>Εφαρμογή</h2>
+        <ul>
+          <li><a href="#features">Λειτουργίες</a></li>
+          <li><a href="#ai">AI βοηθός</a></li>
+          <li><a href="#how">Πώς λειτουργεί</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.metehmio.ergolabosai&amp;hl=el" target="_blank" rel="noopener noreferrer">Google Play</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Υποστήριξη</h2>
+        <ul>
+          <li><a href="mailto:ergolavosai@gmail.com">ergolavosai@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Νομικά</h2>
+        <ul>
+          <li><a href="privacy-policy.html">Πολιτική απορρήτου</a></li>
+          <li><a href="terms.html">Όροι χρήσης</a></li>
+          <li><a href="delete-account.html">Διαγραφή λογαριασμού</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p>© 2026 Metehmio Apps. Με επιφύλαξη παντός δικαιώματος.</p>
+      <p>Η Google Play και το λογότυπο Google Play είναι εμπορικά σήματα της Google LLC.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
