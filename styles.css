@@ -326,3 +326,18 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .pdf-band h3 { font-size: 1.3rem; margin-bottom: .4rem; }
 .pdf-band p { margin: 0 0 .4rem; }
 .pdf-band .small { margin: 0; font-size: .92rem; color: var(--soft); }
+
+/* ---------- Νομικές σελίδες (απόρρητο, όροι, διαγραφή λογαριασμού) ---------- */
+.doc { width: min(100% - 2rem, 760px); margin: clamp(2rem, 6vw, 4rem) auto; }
+.doc h1 { font-size: clamp(1.9rem, 5vw, 2.8rem); margin-bottom: 1.2rem; }
+.doc h2 { font-size: clamp(1.15rem, 3vw, 1.4rem); margin: 2.2rem 0 .6rem; color: var(--text); }
+.doc p, .doc li { color: var(--soft); }
+.doc ul { padding-left: 1.3rem; list-style: disc; margin: 0 0 1rem; }
+.doc li { margin-bottom: .3rem; }
+.doc strong { color: var(--text); }
+.doc ol { padding-left: 1.3rem; margin: 0 0 1rem; list-style: decimal; }
+.doc-footer { margin-top: 3rem; }
+.doc-links { display: flex; flex-wrap: wrap; gap: .4rem 1.6rem; }
+.doc-links a { color: var(--soft); text-decoration: none; padding: .4rem 0; }
+.doc-links a:hover, .doc-links a[aria-current="page"] { color: var(--accent-2); }
+.doc-links a[aria-current="page"] { font-weight: 700; }
