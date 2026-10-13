@@ -314,3 +314,15 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* ---------- 404 ---------- */
 .nf { min-height: 70vh; display: grid; place-items: center; text-align: center; padding: 3rem 1rem; }
 .nf img { width: 160px; margin: 0 auto 1.5rem; }
+
+/* Εξαγωγή PDF */
+.pdf-band {
+  display: flex; gap: 1.2rem; align-items: flex-start;
+  margin-top: clamp(1.8rem, 4vw, 3rem); padding: 1.6rem 1.7rem;
+  border-radius: var(--radius); border: 1px solid rgba(240, 165, 0, .3);
+  background: linear-gradient(135deg, rgba(240, 165, 0, .09), rgba(22, 25, 32, .9));
+}
+.pdf-band > .i { font-size: 2em; color: var(--accent); margin-top: .1rem; }
+.pdf-band h3 { font-size: 1.3rem; margin-bottom: .4rem; }
+.pdf-band p { margin: 0 0 .4rem; }
+.pdf-band .small { margin: 0; font-size: .92rem; color: var(--soft); }
