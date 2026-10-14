@@ -130,7 +130,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .eyebrow {
   display: inline-flex; align-items: center; gap: .55rem;
-  font-size: .85rem; font-weight: 700; letter-spacing: .06em;
+  font-size: 1.05rem; font-weight: 700; letter-spacing: .06em;
   color: var(--accent); margin-bottom: 1.1rem;
 }
 .eyebrow::before { content: ""; width: 28px; height: 3px; background: var(--accent); border-radius: 2px; }
